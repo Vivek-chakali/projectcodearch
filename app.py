@@ -1,4 +1,12 @@
-
+import streamlit as st
+import os
+import tempfile
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.vectorstores import Chroma
+from langchain.document_loaders import GitLoader
+from langchain.chains import RetrievalQA
+from langchain.prompts import PromptTemplate
 
 # --- Helper Function for Ingestion & Processing ---
 
